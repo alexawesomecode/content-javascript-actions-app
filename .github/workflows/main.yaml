@@ -1,4 +1,4 @@
-on: [push, pull]
+on: [push]
 jobs:
   hello_world:
     runs-on: debian-latest
