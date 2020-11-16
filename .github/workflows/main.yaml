@@ -7,7 +7,7 @@ jobs:
       - name: checking out
         uses: actions/checkout@v2
       - name: hello world action
-        uses: /action.yaml
+        uses: ./
         id: hello
         with:
           who-to-greet: 'alex awesome'
