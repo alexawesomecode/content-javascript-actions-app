@@ -1,0 +1,15 @@
+on: [push, pull]
+jobs:
+  hello_world:
+    runs-on: debian-latest
+    name: saying hello job   
+    steps:
+      - name: checking out
+        uses: actions/checkout@v2
+      - name: hello world action
+        uses: ./
+        id: hello
+        with:
+          who-to-greet: 'alex awesome'
+      - name: print output
+        run: echo "the time when ran was $({ steps.hello.outputs.time })"
